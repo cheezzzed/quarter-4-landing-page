@@ -1,0 +1,135 @@
+@use 'reset';
+
+/* 1. Home Layout ================================= */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/dist/img/forest.jpg);
+	background-position: center;
+	background-size: cover;
+	padding: 0 8%;
+
+	.navbar{
+		height: 12%;
+		display: flex;
+		align-items: center;
+
+		.logo{
+			width: 100px;
+			cursor: pointer;
+		}
+
+		nav{
+			flex: 1;
+			text-align: right;
+
+			ul{
+
+				li{
+					display: inline-block;
+					margin-left: 60px;
+					transition: transform 0.3s;
+
+					a{
+						text-decoration: none;
+						color: white;
+						font-size: 20px;
+					}
+
+				}
+
+				li:hover{
+					transform: translateY(-10px);
+				}
+			}
+		}
+	}
+
+	.row{
+		display: flex;
+		height: 88%;
+		align-items: center;
+
+		.col{
+			flex-basis: 50%;
+
+			h1{
+				color: white;
+				font-size: 60px;
+				margin-bottom: 20px;
+			}
+
+			p{
+				color: white;
+				font-size: 20px;
+			}
+
+			.card{
+				width: 200px;
+				height: 230px;
+				display: inline-block;
+				border-radius: 10px;
+				padding: 15px 25px;
+				cursor: pointer;
+				margin: 10px 15px;
+				background-image: url(/dist/img/cpj-logo.png);
+				background-position: center;
+				background-size: cover;
+				transition: transform 0.5s;
+
+				h2{
+					color: orange;
+					text-align: center;
+					margin-top: 160px;
+					font-weight: 700;
+				}
+				
+				p{
+					color: orange;
+					text-align: center;
+					font-weight: 700;
+					font-size: 15px;
+				}
+			}
+
+			.card:hover{
+				transform: translateY(-10px);
+			}
+
+			.card-two{
+				background-image: url(/dist/img/main-scuf.jpg);
+				background-position: center;
+				background-size: cover;
+
+				h2{
+					color: orange;
+				}
+
+				p{
+					color: orange;
+					text-align: center;
+				}
+			}
+
+			.id-two{
+				background-image: url(/dist/img/shop.png);
+			}
+
+			.wd{
+				background-image: url(/dist/img/main-cleats.webp);
+			}
+		}
+	}
+}
